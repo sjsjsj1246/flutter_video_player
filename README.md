@@ -1,16 +1,21 @@
 # video_player
 
-A new Flutter project.
+## 프로젝트 개요
 
-## Getting Started
+- video_player 플러그인 학습
+- image_picker 플러그인 학습
+- Stack 위젯
+- AspectRatio 위젯
 
-This project is a starting point for a Flutter application.
+## 노트
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- package
+  - video_player
+  - image_picker
+    - 파일 권한을 얻어야 함 -> 라이브러리 문서에서 확인
+    - ios:
+      - ios -> Runner -> info.plist
+      - 갤러리 권한: NSPhotoLibraryUsageDescription
+      - 카메라 권한: NSCameraUsageDescription
+      - 마이크 권한: NSMicrophoneUsageDescription
+    - android:
