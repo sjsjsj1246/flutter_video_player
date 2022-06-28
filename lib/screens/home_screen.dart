@@ -18,7 +18,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget renderVideo() {
-    return Center(child: CustomVideoPlayer(video: video!));
+    return Center(
+        child: CustomVideoPlayer(
+            video: video!, onNewVideoPressed: onNewVideoPressed));
   }
 
   Widget renderEmpty() {
@@ -27,7 +29,11 @@ class _HomeScreenState extends State<HomeScreen> {
       decoration: getBoxDecoration(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [_Logo(onTap: onLogoTap), SizedBox(height: 30.0), _AppName()],
+        children: [
+          _Logo(onTap: onNewVideoPressed),
+          SizedBox(height: 30.0),
+          _AppName()
+        ],
       ),
     );
   }
@@ -41,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ));
   }
 
-  void onLogoTap() async {
+  void onNewVideoPressed() async {
     final video = await ImagePicker().pickVideo(source: ImageSource.gallery);
 
     if (video != null) {
