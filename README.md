@@ -19,3 +19,27 @@
       - 카메라 권한: NSCameraUsageDescription
       - 마이크 권한: NSMicrophoneUsageDescription
     - android:
+      - android:requestLegacyExternalStorage="true"
+
+videoplayer
+
+- 갤러리의 이미지 또는 비디오를 ImagePicker로 가져온다
+- XFile 데이터를 File경로로 변환하여 VideoPlayer로 재생한다
+- aspectRatio
+
+Slider
+
+- min, max
+- value
+- onChanged
+
+LifeCycle
+
+- didUpdateWidget
+  - 위젯의 상태가 변경되었을 경우 동작 정의
+
+## error
+
+- MissingPluginException
+  - 제대로 플러그인이 설치가 안된것
+  - flutter clean, flutter pub get, 앱 종료 후 다시 시작해보기
